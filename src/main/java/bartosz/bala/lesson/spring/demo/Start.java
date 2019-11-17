@@ -38,13 +38,21 @@ public class Start {
         Employee employee = new Employee("Jan","Kowalski","kowalski@w.pl",address2,dateStartWork, DepartmentType.SALES);
         Customer customer = new Customer("Bartosz", "Bala",employee,address);
         Customer customer2 = new Customer("Agnieszka", "Bala",employee,address);
+
+        customer.setEmployee(employee);
+        customer2.setEmployee(employee);
         Set<Customer> customers = new HashSet<>();
         customers.add(customer);
         customers.add(customer2);
         employee.setCustomers(customers);
+
+
         employeeRepo.save(employee);
         customerRepo.save(customer);
         customerRepo.save(customer2);
+
+
+
 
 
 

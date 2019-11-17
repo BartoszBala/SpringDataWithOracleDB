@@ -26,15 +26,18 @@ public class Customer {
     @Column(name="last_name")
     private String lastName;
     @ManyToOne
-    @JoinColumn(name="client_id",nullable=false,insertable = false, updatable = false)
+    @JoinColumn(name="employee_id",nullable=false)
     private Employee employee;
     @Embedded
     Address address;
+
+
 
     public Customer(String firstname, String lastName, Employee employee, Address address) {
         this.firstname = firstname;
         this.lastName = lastName;
         this.employee = employee;
         this.address = address;
+
     }
 }

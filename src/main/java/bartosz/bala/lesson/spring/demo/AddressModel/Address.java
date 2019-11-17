@@ -1,10 +1,7 @@
 package bartosz.bala.lesson.spring.demo.AddressModel;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 @Getter
@@ -25,11 +22,14 @@ public class Address {
     @Column(name="house_number")
     private String numberOfResidence;
 
+
+
     public Address(String country, String city, String postCode, String street, String numberOfResidence) {
         this.country = country;
         this.city = city;
         this.postCode = postCode;
         this.street = street;
         this.numberOfResidence = numberOfResidence;
+
     }
 }

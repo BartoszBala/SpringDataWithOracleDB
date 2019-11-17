@@ -37,8 +37,8 @@ public class Employee {
     @Enumerated(EnumType.STRING)
    @Column(name="department")
     DepartmentType departmentType;
-    @OneToMany
-    @JoinColumn(name="client_id")
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name="employee_id")
     private Set<Customer> customers;
 
 
@@ -51,4 +51,6 @@ public class Employee {
         this.departmentType = departmentType;
 
     }
+
+
 }
