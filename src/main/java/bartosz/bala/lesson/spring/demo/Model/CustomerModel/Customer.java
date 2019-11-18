@@ -1,8 +1,7 @@
-package bartosz.bala.lesson.spring.demo.CustomerModel;
+package bartosz.bala.lesson.spring.demo.Model.CustomerModel;
 
-import bartosz.bala.lesson.spring.demo.AddressModel.Address;
-import bartosz.bala.lesson.spring.demo.EmployeeModel.Employee;
-import lombok.AllArgsConstructor;
+import bartosz.bala.lesson.spring.demo.Model.AddressModel.Address;
+import bartosz.bala.lesson.spring.demo.Model.EmployeeModel.Employee;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -39,5 +38,16 @@ public class Customer {
         this.employee = employee;
         this.address = address;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", employee=" + employee +
+                ", address=" + address +
+                '}';
     }
 }

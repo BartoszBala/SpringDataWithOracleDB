@@ -1,4 +1,4 @@
-package bartosz.bala.lesson.spring.demo.AddressModel;
+package bartosz.bala.lesson.spring.demo.Model.AddressModel;
 
 
 import lombok.*;
@@ -31,5 +31,16 @@ public class Address {
         this.street = street;
         this.numberOfResidence = numberOfResidence;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", postCode='" + postCode + '\'' +
+                ", street='" + street + '\'' +
+                ", numberOfResidence='" + numberOfResidence + '\'' +
+                '}';
     }
 }
