@@ -1,7 +1,8 @@
-package bartosz.bala.lesson.spring.demo.Model.EmployeeModel;
+package bartosz.bala.lesson.spring.demo.DAO.entity.Model.EmployeeModel;
 
-import bartosz.bala.lesson.spring.demo.Model.AddressModel.Address;
-import bartosz.bala.lesson.spring.demo.Model.CustomerModel.Customer;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.AddressModel.Address;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.CustomerModel.Customer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -36,8 +37,9 @@ public class Employee {
     @Enumerated(EnumType.STRING)
    @Column(name="department")
     DepartmentType departmentType;
-    @OneToMany(cascade = {CascadeType.ALL})
+    @OneToMany(cascade = {CascadeType.ALL},fetch = FetchType.LAZY)
     @JoinColumn(name="employee_id")
+    @JsonIgnore
     private Set<Customer> customers;
 
 

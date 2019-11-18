@@ -1,8 +1,8 @@
-package bartosz.bala.lesson.spring.demo.Repo;
+package bartosz.bala.lesson.spring.demo.DAO;
 
 
 
-import bartosz.bala.lesson.spring.demo.Model.CustomerModel.Customer;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.CustomerModel.Customer;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

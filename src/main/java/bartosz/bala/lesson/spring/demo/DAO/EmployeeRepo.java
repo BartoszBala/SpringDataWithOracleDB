@@ -1,7 +1,7 @@
-package bartosz.bala.lesson.spring.demo.Repo;
+package bartosz.bala.lesson.spring.demo.DAO;
 
-import bartosz.bala.lesson.spring.demo.Model.EmployeeModel.DepartmentType;
-import bartosz.bala.lesson.spring.demo.Model.EmployeeModel.Employee;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.EmployeeModel.DepartmentType;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.EmployeeModel.Employee;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

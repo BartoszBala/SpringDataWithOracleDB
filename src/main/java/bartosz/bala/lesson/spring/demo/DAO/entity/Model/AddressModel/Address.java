@@ -1,4 +1,4 @@
-package bartosz.bala.lesson.spring.demo.Model.AddressModel;
+package bartosz.bala.lesson.spring.demo.DAO.entity.Model.AddressModel;
 
 
 import lombok.*;

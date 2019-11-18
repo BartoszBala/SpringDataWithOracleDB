@@ -1,7 +1,8 @@
-package bartosz.bala.lesson.spring.demo.Model.CustomerModel;
+package bartosz.bala.lesson.spring.demo.DAO.entity.Model.CustomerModel;
 
-import bartosz.bala.lesson.spring.demo.Model.AddressModel.Address;
-import bartosz.bala.lesson.spring.demo.Model.EmployeeModel.Employee;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.AddressModel.Address;
+import bartosz.bala.lesson.spring.demo.DAO.entity.Model.EmployeeModel.Employee;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,7 +25,7 @@ public class Customer {
     private String firstname;
     @Column(name="last_name")
     private String lastName;
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="employee_id",nullable=false)
     private Employee employee;
     @Embedded
